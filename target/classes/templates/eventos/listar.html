@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+ <html>
+	<head>
+		<title>Listado</title>
+	</head>
+	<body>
+		<h1>Listado de Eventos</h1>
+		<table>
+			<tbody>
+			    <tr th:each="e : ${eventos}">
+			  	<td th:text="${e.name} + ' (' + ${e.cuentaUsuario?.username} + ')'">Nombre (Usuario)</td>            </tr>
+			</tbody>
+		</table>
+	</body>
+ </html>
