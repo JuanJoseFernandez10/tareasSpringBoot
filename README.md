@@ -52,12 +52,12 @@ spring.datasource.driver-class-name=org.h2.Driver
    - http://localhost:9090/...
 
 ## 7) Pantallas / Rutas MVC
-- GET /entidad (listar)
-- GET /entidad/nuevo (formulario alta)
+- GET /lista (listar)
+- GET /evento/guardar (formulario alta)
 - POST /entidad (crear)
-- GET /entidad/{id}/editar (editar)
-- POST /entidad/{id} (actualizar)
-- POST /entidad/{id}/borrar (eliminar)
+- GET /evento/eliminar (editar)
+- POST /evento/{id} (actualizar)
+- POST /evento/{id}/borrar (eliminar)
 
 
 ## 8) Mejoras extra (opcional)
