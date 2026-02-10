@@ -36,7 +36,7 @@
 						      method="post" style="display:inline;">
 							<button type="submit" 
 						            class="btn btn-sm btn-danger"
-						            onclick="return confirm('¿Realmente quieres eliminar a ${e.username} ?')">
+									onclick="return confirm('¿Realmente quieres eliminarlo?')"
 						    	Eliminar
 						    </button>
 						</form>
@@ -47,7 +47,7 @@
 		<div class="mb-3">
 		    <a th:href="@{/usuario/nuevo}" class="btn btn-success">+ Nuevo Usuario</a>
 		</div>
-		<div class="mb-3 text-end">
+		<div class="mb-3 mt-5 text-center">
 		    <a th:href="@{/}" class="btn btn-outline-danger">
 		        Volver al Inicio
 		    </a>
