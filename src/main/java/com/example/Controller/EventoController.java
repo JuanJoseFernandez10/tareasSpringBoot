@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.Entidad.Evento;
@@ -23,19 +24,19 @@ public class EventoController {
 		return "eventos/lista";
 	}
 	
-	@GetMapping("/eliminar")
-	public String eliminarEvento(@ModelAttribute Evento evento) {
-		servicio.eliminarEvento(evento);
+	@PostMapping("/eliminar")
+	public String eliminarEvento(@ModelAttribute Long id) {
+		servicio.eliminarEvento(id);
 		return "evento/lista";
 	}
 	
-	@GetMapping("/guardar")
+	@PostMapping("/guardar")
 	public String guardarEvento(@ModelAttribute Evento evento) {
 		servicio.guardarEvento(evento);
 		return "evento/lista";
 	}
 	
-	@GetMapping("/actualizar")
+	@PostMapping("/actualizar")
 	public String actualizarEvento(@ModelAttribute Evento evento) {
 		servicio.updateEvento(evento);
 		return "evento/lista";

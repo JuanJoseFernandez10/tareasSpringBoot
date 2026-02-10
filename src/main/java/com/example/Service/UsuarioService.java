@@ -28,8 +28,12 @@ public class UsuarioService {
 		repositorio.save(usuario);	
 	}
 	
-	public void eliminarUsuario(Usuario usuario) {
-		repositorio.delete(usuario);
+	public void eliminarUsuario(Long id) {
+		repositorio.deleteById(id);
+	}
+	
+	public Optional<Usuario> obtenerUsuarioPorId(Long id) {
+		return repositorio.findById(id);
 	}
 	
 	public void updateUsuario(Usuario usuario) {

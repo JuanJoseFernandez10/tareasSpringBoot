@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.Entidad.Evento;
+import com.example.Entidad.Usuario;
 import com.example.Repository.EventoRepository;
 
 
@@ -21,6 +22,10 @@ public class EventoService {
 		return repositorio.findAll();
 	}
 	
+	public Optional<Evento> obtenerEventoPorId(Long id) {
+		return repositorio.findById(id);
+	}
+	
 	public Optional<Evento> findByNombre(String nombre) {
 		return repositorio.findByNombre(nombre);
 	}
@@ -29,8 +34,8 @@ public class EventoService {
 		repositorio.save(evento);	
 	}
 	
-	public void eliminarEvento(Evento evento) {
-		repositorio.delete(evento);
+	public void eliminarEvento(Long id) {
+		repositorio.deleteById(id);
 	}
 	
 	public void updateEvento(Evento evento) {
