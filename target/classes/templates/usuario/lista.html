@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+ <html>
+	<head>
+		<title>Listado</title>
+	</head>
+	<style>
+		table, td, th{
+			border: 1px black solid;
+		}
+		table{
+			border-spacing: 15px;
+		}
+		td{
+			font-size: large;
+		}
+		td:focus{
+			background-color: aqua;
+		}
+	</style>
+	<body>
+		<h1>Listado de Usuarios</h1>
+		<table cell>
+			<tbody>
+				<tr>
+					<th>Usuarios</th>
+				</tr>
+			    <tr th:each="e : ${usuarios}">
+			  		<td th:text="${e}">Eventos:</td>           
+			 	</tr>
+			</tbody>
+		</table>
+	</body>
+ </html>

@@ -26,18 +26,21 @@ public class UsuarioController {
 	@GetMapping("/eliminar")
 	public String eliminarEvento(@ModelAttribute Usuario usuario) {
 		servicio.eliminarUsuario(usuario);
-		return "evento/lista";
+		return "usuario/lista";
 	}
 	
 	@GetMapping("/guardar")
 	public String guardarEvento(@ModelAttribute Usuario usuario) {
 		servicio.guardarUsuario(usuario);
-		return "evento/lista";
+		return "usuario/lista";
 	}
 	
 	@GetMapping("/actualizar")
 	public String actualizarEvento(@ModelAttribute Usuario usuario) {
 		servicio.updateUsuario(usuario);
-		return "evento/lista";
+		return "usuario/lista";
 	}
+	
+	
+	
 }

@@ -17,7 +17,7 @@ public class Usuario {
 	@Column(length=50)
 	private String username;
 	@Column(length=255)
-	private String contraseña;
+	private String password;
 	@Enumerated(EnumType.STRING)   
     @Column(name = "rol", length = 20)   
     private Rol rol;
@@ -42,12 +42,12 @@ public class Usuario {
 		this.username = username;
 	}
 
-	public String getContraseña() {
-		return contraseña;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public Rol getRol() {
@@ -56,6 +56,11 @@ public class Usuario {
 
 	public void setRol(Rol rol) {
 		this.rol = rol;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [username=" + username + ", contraseña=" + password + ", rol=" + rol + "]";
 	}
 	
 	
