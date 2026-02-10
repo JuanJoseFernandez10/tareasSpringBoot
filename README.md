@@ -50,19 +50,30 @@ spring.datasource.driver-class-name=org.h2.Driver
    - ./mvnw spring-boot:run   (o equivalente)
 3. URL de acceso:
    - http://localhost:9090/...
+4. Login:
+   - Username: admnistrador Password: admin123 Rol: ADMINISTRADOR
+   - Username: usuario Password: usuario Rol: USER
 
 ## 7) Pantallas / Rutas MVC
-- GET /lista (listar)
-- GET /evento/guardar (formulario alta)
-- POST /entidad (crear)
-- GET /evento/eliminar (editar)
-- POST /evento/{id} (actualizar)
-- POST /evento/{id}/borrar (eliminar)
+### Eventos
+GET /eventos/lista → listar eventos
+GET /eventos/guardar → formulario nuevo
+POST /eventos/guardar → crear evento
+GET /eventos/editar/{id} → formulario editar
+POST /eventos/actualizar/{id} → actualizar evento
+POST /eventos/eliminar/{id} → eliminar evento
+GET /eventos → redirige a lista
+### Usuarios
+GET /usuario/lista → listar usuarios
+GET /usuario/editar/{id} → formulario editar usuario
+POST /usuario/actualizar/{id} → actualizar usuario
+POST /usuario/eliminar/{id} → eliminar usuario
+GET /usuario/nuevo → formulario nuevo usuario
+POST /usuario/guardar → crear nuevo usuario
+GET /usuario → redirige a lista
 
 
-## 8) Mejoras extra (opcional)
+## 8) Mejoras extra
 - Validaciones
 - Estilos Bootstrap
-- Búsqueda
-- Pruebas
-- Paginación
+- Seguridad
