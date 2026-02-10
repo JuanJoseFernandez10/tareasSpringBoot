@@ -2,6 +2,8 @@ package com.example.Entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -16,8 +18,9 @@ public class Usuario {
 	private String username;
 	@Column(length=255)
 	private String contraseña;
-	@Column(length=40)
-	private Rol rol;
+	@Enumerated(EnumType.STRING)   
+    @Column(name = "rol", length = 20)   
+    private Rol rol;
 	
 	public Usuario () {
 		

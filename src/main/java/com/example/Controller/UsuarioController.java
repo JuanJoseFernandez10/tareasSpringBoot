@@ -7,38 +7,37 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.Entidad.Evento;
-import com.example.Service.EventoService;
+import com.example.Entidad.Usuario;
+import com.example.Service.UsuarioService;
 
 @Controller
-@RequestMapping("/eventos")
-public class EventoController {
+@RequestMapping("/usuario")
+public class UsuarioController {
 
 	@Autowired
-	private EventoService servicio;
+	private UsuarioService servicio;
 	
 	@GetMapping
 	public String listarEventos(Model modelo) {
-		modelo.addAttribute("eventos", servicio.listarTodos());
-		return "eventos/lista";
+		modelo.addAttribute("usuarios", servicio.listarTodos());
+		return "usuario/lista";
 	}
 	
 	@GetMapping("/eliminar")
-	public String eliminarEvento(@ModelAttribute Evento evento) {
-		servicio.eliminarEvento(evento);
+	public String eliminarEvento(@ModelAttribute Usuario usuario) {
+		servicio.eliminarUsuario(usuario);
 		return "evento/lista";
 	}
 	
 	@GetMapping("/guardar")
-	public String guardarEvento(@ModelAttribute Evento evento) {
-		servicio.guardarEvento(evento);
+	public String guardarEvento(@ModelAttribute Usuario usuario) {
+		servicio.guardarUsuario(usuario);
 		return "evento/lista";
 	}
 	
 	@GetMapping("/actualizar")
-	public String actualizarEvento(@ModelAttribute Evento evento) {
-		servicio.updateEvento(evento);
+	public String actualizarEvento(@ModelAttribute Usuario usuario) {
+		servicio.updateUsuario(usuario);
 		return "evento/lista";
 	}
-	
 }
