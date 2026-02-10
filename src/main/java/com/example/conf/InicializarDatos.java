@@ -35,6 +35,7 @@ public class InicializarDatos implements CommandLineRunner{
 		 	usuarioNormal.setPassword("usuario");
 		 	usuarioNormal.setRol(Rol.USER);
 		 	servicioUsuario.guardarUsuario(usuarioNormal);
+		 	servicioUsuario.guardarUsuario(admin);
 	        for (int i = 0; i < 10; i++) {
 	            Evento evento = new Evento();
 	            Usuario user = new Usuario();
