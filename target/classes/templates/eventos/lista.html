@@ -19,7 +19,7 @@
 			background-color: aqua;
 		}
 	</style>
-	<body>
+	<body class="">
 		<h1>Listado de Eventos</h1>
 		<table cell>
 			<tbody>
@@ -46,6 +46,11 @@
 		</table>
 		<div class="mb-3">
 		    <a th:href="@{/eventos/nuevo}" class="btn btn-success">+ Nuevo Evento</a>
+		</div>
+		<div class="mb-3 text-end">
+		    <a th:href="@{/}" class="btn btn-outline-danger">
+		        Volver al Inicio
+		    </a>
 		</div>
 	</body>
  </html>

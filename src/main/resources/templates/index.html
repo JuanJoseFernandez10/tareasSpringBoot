@@ -6,5 +6,13 @@
 	<body>
 		<a th:href="@{/eventos}">Eventos</a>
 		<a th:href="@{/usuario}">Usuarios</a>
+		
+		<div class="mb-3 text-end">
+		    <form th:action="@{/logout}" method="post">
+		        <button type="submit" class="btn btn-outline-danger">
+		            Cerrar Sesión
+		        </button>
+		    </form>
+		</div>
 	</body>
  </html>

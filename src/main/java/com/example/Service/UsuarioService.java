@@ -20,7 +20,7 @@ public class UsuarioService {
 		return repositorio.findAll();
 	}
 	
-	public Optional<Usuario> findByName(String name) {
+	public Optional<Usuario> findByUsername(String name) {
 		return repositorio.findByUsername(name);
 	}
 
