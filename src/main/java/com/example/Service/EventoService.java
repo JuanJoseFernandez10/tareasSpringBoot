@@ -1,6 +1,7 @@
 package com.example.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,9 +21,9 @@ public class EventoService {
 		return repositorio.findAll();
 	}
 	
-	/*public Evento encontrarEvento(String name) {
-		return repositorio.);
-	}*/
+	public Optional<Evento> findByNombre(String nombre) {
+		return repositorio.findByNombre(nombre);
+	}
 
 	public void guardarEvento(Evento evento) {
 		repositorio.save(evento);	
@@ -30,6 +31,10 @@ public class EventoService {
 	
 	public void eliminarEvento(Evento evento) {
 		repositorio.delete(evento);
+	}
+	
+	public void updateEvento(Evento evento) {
+		repositorio.save(evento);
 	}
 	
 	
