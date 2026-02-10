@@ -6,14 +6,14 @@
 ## 2) Repositorio (fork) y gestión de versiones
 - Repositorio base: https://github.com/profeInformatica101/tareasSpringBoot
 - Enlace a MI fork: https://github.com/JuanJoseFernandez10/tareasSpringBoot
-- Nº de commits realizados: (mínimo 5)
+- Nº de commits realizados: 13
 
 ## 3) Arquitectura
 Explica brevemente cómo has organizado:
-- Controller: EventosController
-- Service: EventosService
-- Repository: EventosRepository
-- Entity: Eventos
+- Controller: EventosController, UsuarioController
+- Service: EventosService, UsuarioService, CustomUserDetailsService
+- Repository: EventosRepository UsuarioRepository
+- Entity: Eventos Usuario Enum: Rol, Generos
 
 ## 4) Base de datos elegida (marca una)
 - [*] H2
@@ -24,7 +24,8 @@ Explica brevemente cómo has organizado:
 ### 5.1 Dependencias añadidas
 Thymeleaf
 H2 DataBase
-Sprinig Web
+Spring Web
+Spring Security
 JPA
 Dev Tool
 
@@ -56,21 +57,21 @@ spring.datasource.driver-class-name=org.h2.Driver
 
 ## 7) Pantallas / Rutas MVC
 ### Eventos
-GET /eventos/lista → listar eventos
-GET /eventos/guardar → formulario nuevo
-POST /eventos/guardar → crear evento
-GET /eventos/editar/{id} → formulario editar
-POST /eventos/actualizar/{id} → actualizar evento
-POST /eventos/eliminar/{id} → eliminar evento
-GET /eventos → redirige a lista
+- GET /eventos/lista → listar eventos
+- GET /eventos/guardar → formulario nuevo
+- POST /eventos/guardar → crear evento
+- GET /eventos/editar/{id} → formulario editar
+- POST /eventos/actualizar/{id} → actualizar evento
+- POST /eventos/eliminar/{id} → eliminar evento
+- GET /eventos → redirige a lista
 ### Usuarios
-GET /usuario/lista → listar usuarios
-GET /usuario/editar/{id} → formulario editar usuario
-POST /usuario/actualizar/{id} → actualizar usuario
-POST /usuario/eliminar/{id} → eliminar usuario
-GET /usuario/nuevo → formulario nuevo usuario
-POST /usuario/guardar → crear nuevo usuario
-GET /usuario → redirige a lista
+- GET /usuario/lista → listar usuarios
+- GET /usuario/editar/{id} → formulario editar usuario
+- POST /usuario/actualizar/{id} → actualizar usuario
+- POST /usuario/eliminar/{id} → eliminar usuario
+- GET /usuario/nuevo → formulario nuevo usuario
+- POST /usuario/guardar → crear nuevo usuario
+- GET /usuario → redirige a lista
 
 
 ## 8) Mejoras extra
