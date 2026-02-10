@@ -32,7 +32,6 @@
 						<a th:href="@{/usuario/editar/{id}(id=${e.id})}" 
 						    class="btn btn-sm btn-warning">Editar</a>
 
-						<!-- Botón Eliminar (con confirmación) -->
 						<form th:action="@{/usuario/eliminar/{id}(id=${e.id})}" 
 						      method="post" style="display:inline;">
 							<button type="submit" 
